@@ -227,4 +227,45 @@ mysql> select * from addressbook_table order by FirstName asc;
 +-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+
 3 rows in set (0.00 sec)
 
+mysql>alter table addressbook_table add column Relation varchar(200);		# Add new coloumn in addressbook
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> alter table addressbook_table add column Type varchar(200;
+mysql> alter table addressbook_table add column Type varchar(200);
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+------+
+| FirstName | LastName | Address        | city     | State | Zip    | PhoneNumber | Email                 | Relation | Type |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+------+
+| aman      | kumar    | nehru_nagar    | patna    | bihar | 800001 |    99991236 | aman.kumar@gmail.com  | NULL     | NULL |
+| john      | brut     | house number 5 | downtown | dubai | 620001 |    26677236 | john.b@gmail.com      | NULL     | NULL |
+| Nadeem    | Akhtar   | gandhi nagar   | chapra   | bihar | 841301 |    78965412 | me.nadeem55@gmail.com | NULL     | NULL |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+------+
+3 rows in set (0.00 sec)
+
+mysql> update addressbook_table set Relation = 'aman' where FirstName = 'Bunny';		#update the addressbook with relation
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> update addressbook_table set Relation = 'john' where FirstName = 'Frank';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> update addressbook_table set Relation = 'Nadeem' where FirstName = 'Sam';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+mysql> select * from addressbook_table;			#show the updated table
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+------+
+| FirstName | LastName | Address        | city     | State | Zip    | PhoneNumber | Email                 | Relation | Type |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+------+
+| aman      | kumar    | nehru_nagar    | patna    | bihar | 800001 |    99991236 | aman.kumar@gmail.com  | NULL     | NULL |
+| john      | brut     | house number 5 | downtown | dubai | 620001 |    26677236 | john.b@gmail.com      | NULL     | NULL |
+| Nadeem    | Akhtar   | gandhi nagar   | chapra   | bihar | 841301 |    78965412 | me.nadeem55@gmail.com | NULL     | NULL |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+------+
+3 rows in set (0.00 sec)
+
 mysql>
