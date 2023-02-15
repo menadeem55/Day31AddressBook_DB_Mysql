@@ -156,4 +156,17 @@ mysql> select * from addressbook_table;
 +-----------+----------+----------------+----------+----------+--------+-------------+-----------------------+
 4 rows in set (0.00 sec)
 
+mysql> delete from addressbook_table where FirstName = "sonam";
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from addressbook_table;
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+
+| FirstName | LastName | Address        | city     | State | Zip    | PhoneNumber | Email                 |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+
+| aman      | kumar    | nehru_nagar    | patna    | bihar | 800001 |    99991236 | aman.kumar@gmail.com  |
+| john      | brut     | house number 5 | downtown | dubai | 620001 |    26677236 | john.b@gmail.com      |
+| Nadeem    | Akhtar   | gandhi nagar   | chapra   | bihar | 841301 |    78965412 | me.nadeem55@gmail.com |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+
+3 rows in set (0.00 sec)
+
 mysql>
