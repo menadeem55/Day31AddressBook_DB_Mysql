@@ -298,4 +298,51 @@ mysql>  select count(*) from addressbook_table;
 +----------+
 1 row in set (0.01 sec)
 
+mysql>select * from addressbook_table where Relation = "Firend";
++-----------+----------+-------------+-------+-------+--------+-------------+----------------------+----------+--------+
+| FirstName | LastName | Address     | city  | State | Zip    | PhoneNumber | Email                | Relation | Type   |
++-----------+----------+-------------+-------+-------+--------+-------------+----------------------+----------+--------+
+| aman      | kumar    | nehru_nagar | patna | bihar | 800001 |    99991236 | aman.kumar@gmail.com | Firend   | friend |
++-----------+----------+-------------+-------+-------+--------+-------------+----------------------+----------+--------+
+1 row in set (0.00 sec)
+
+mysql> select * from addressbook_table where Relation = "son";
++-----------+----------+----------------+----------+-------+--------+-------------+------------------+----------+--------+
+| FirstName | LastName | Address        | city     | State | Zip    | PhoneNumber | Email            | Relation | Type   |
++-----------+----------+----------------+----------+-------+--------+-------------+------------------+----------+--------+
+| john      | brut     | house number 5 | downtown | dubai | 620001 |    26677236 | john.b@gmail.com | son      | friend |
++-----------+----------+----------------+----------+-------+--------+-------------+------------------+----------+--------+
+1 row in set (0.00 sec)
+
+mysql> select * from addressbook_table where Relation = "brother";
++-----------+----------+--------------+--------+-------+--------+-------------+-----------------------+----------+---------+
+| FirstName | LastName | Address      | city   | State | Zip    | PhoneNumber | Email                 | Relation | Type    |
++-----------+----------+--------------+--------+-------+--------+-------------+-----------------------+----------+---------+
+| Nadeem    | Akhtar   | gandhi nagar | chapra | bihar | 841301 |    78965412 | me.nadeem55@gmail.com | brother  | brother |
++-----------+----------+--------------+--------+-------+--------+-------------+-----------------------+----------+---------+
+1 row in set (0.00 sec)
+
+mysql> update addressbook_table set Relation = 'Friend' = 'Nadeem';
+Query OK, 3 rows affected (0.00 sec)
+Rows matched: 3  Changed: 3  Warnings: 0
+
+mysql> update addressbook_table set Relation = 'Brother' = 'john';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 3  Changed: 0  Warnings: 0
+
+mysql> update addressbook_table set Relation = 'Brother' = 'aman';
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 3  Changed: 0  Warnings: 0
+
+mysql> select * from addressbook_table;
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+---------+
+| FirstName | LastName | Address        | city     | State | Zip    | PhoneNumber | Email                 | Relation | Type    |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+---------+
+| aman      | kumar    | nehru_nagar    | patna    | bihar | 800001 |    99991236 | aman.kumar@gmail.com  | Brother  | friend  |
+| john      | brut     | house number 5 | downtown | dubai | 620001 |    26677236 | john.b@gmail.com      | friend   | friend  |
+| Nadeem    | Akhtar   | gandhi nagar   | chapra   | bihar | 841301 |    78965412 | me.nadeem55@gmail.com | Brother  | brother |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+----------+---------+
+3 rows in set (0.00 sec)
+
 mysql>
+
