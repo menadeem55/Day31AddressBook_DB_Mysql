@@ -193,4 +193,28 @@ mysql> select * from addressbook_table where city = "downtown";
 +-----------+----------+----------------+----------+-------+--------+-------------+------------------+
 1 row in set (0.00 sec)
 
+mysql> select count(*) from addressbook_table where city = "patna";		#count the person from addressbook
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from addressbook_table where city = "downtown";
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from addressbook_table where city = "chapra";
++----------+
+| count(*) |
++----------+
+|        1 |
++----------+
+1 row in set (0.00 sec)
+
 mysql>
