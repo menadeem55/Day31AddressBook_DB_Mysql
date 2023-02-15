@@ -217,4 +217,14 @@ mysql> select count(*) from addressbook_table where city = "chapra";
 +----------+
 1 row in set (0.00 sec)
 
+mysql> select * from addressbook_table order by FirstName asc;
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+
+| FirstName | LastName | Address        | city     | State | Zip    | PhoneNumber | Email                 |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+
+| aman      | kumar    | nehru_nagar    | patna    | bihar | 800001 |    99991236 | aman.kumar@gmail.com  |
+| john      | brut     | house number 5 | downtown | dubai | 620001 |    26677236 | john.b@gmail.com      |
+| Nadeem    | Akhtar   | gandhi nagar   | chapra   | bihar | 841301 |    78965412 | me.nadeem55@gmail.com |
++-----------+----------+----------------+----------+-------+--------+-------------+-----------------------+
+3 rows in set (0.00 sec)
+
 mysql>
